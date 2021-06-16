@@ -12,25 +12,25 @@ namespace Laba4_GeneticAlgorithm
     {
         public static int minNumberInPopulation = -200;
         public static int maxNumberInPopulation = 200;
-        public static int sizeOfPopulation = 200;
+        public static int sizeOfPopulation = 1000;
         public static int sizeOfIndividual = 5;        
         public static int f1Right = -50;
         public static double coeficientOfSelection = 0.5;
         public static int countOfChildrens = 10;
-        public static double possibilityOfMutation = 0.7;
+        public static double possibilityOfMutation = 0.1;
         public static Random random = new Random();
         public static int c = 0;
         public static int flagForChildX = 0;
-        public static int bestestCoeficientOfSurviving = int.MaxValue;
+        public static long bestestCoeficientOfSurviving = long.MaxValue;
         public static List<int> bestestIndividual = null;
-        public static List<(int, List<int>)> startPopulation = new List<(int, List<int>)>();
-        public static List<(int, List<int>)> currentPopulation = startPopulation;
-        public static List<(int, List<int>)> pastPopulationAndChildrens = new List<(int, List<int>)>();
-        public static List<(int, List<int>)> parents = new List<(int, List<int>)>();
-        public static List<(int, List<int>)> childrens = new List<(int, List<int>)>();
-        public static List<(int, List<int>)> newPopulation = new List<(int, List<int>)>();
-        public static List<Fraction> allPossibilities = new List<Fraction>();
-        public static List<Fraction> lineOfPossibilities = new List<Fraction>();
+        public static List<(long, List<int>)> startPopulation = new List<(long, List<int>)>();
+        public static List<(long, List<int>)> currentPopulation = startPopulation;
+        public static List<(long, List<int>)> pastPopulationAndChildrens = new List<(long, List<int>)>();
+        public static List<(long, List<int>)> parents = new List<(long, List<int>)>();
+        public static List<(long, List<int>)> childrens = new List<(long, List<int>)>();
+        public static List<(long, List<int>)> newPopulation = new List<(long, List<int>)>();
+        public static List<double> allPossibilities = new List<double>();
+        public static List<double> lineOfPossibilities = new List<double>();
 
 
         public static List<int> GetListOfInt(int minNumber, int maxNumber, int count)
@@ -59,9 +59,9 @@ namespace Laba4_GeneticAlgorithm
             return (int)(w * Math.Pow(x, 2) * y * z + z + x * Math.Pow(y, 2) + Math.Pow(w, 2) * x * Math.Pow(z, 2) + x);
         }
 
-        public static void GetCurrentPopulationResults(List<(int, List<int>)> currentPopulation)
+        public static void GetCurrentPopulationResults(List<(long, List<int>)> currentPopulation)
         {
-            int bestCoeficientOfSurviving = int.MaxValue;
+            long bestCoeficientOfSurviving = long.MaxValue;
             List<int> bestIndividual = null;
             for (int i = 0; i < currentPopulation.Count; i++)
             {
@@ -73,15 +73,15 @@ namespace Laba4_GeneticAlgorithm
             }
             bestestCoeficientOfSurviving = bestCoeficientOfSurviving;
             bestestIndividual = bestIndividual;
-            Console.WriteLine($"bestCoeficientOfSurviving {c} : {bestCoeficientOfSurviving} \t\t individual: {WriteListOfInt(bestIndividual)}");
+            Console.WriteLine($"bestCoeficientOfSurviving {c} : {bestestCoeficientOfSurviving} \t\t individual: {WriteListOfInt(bestestIndividual)}");
             c++;
         }
 
 
-        public static (int, List<int>) CreateChild((int, List<int>) parent1, (int, List<int>) parent2)
+        public static (long, List<int>) CreateChild((long, List<int>) parent1, (long, List<int>) parent2)
         {
             List<int> childNumbers = new List<int>();
-            int coeficientOfSurviving = new int();
+            long coeficientOfSurviving = new int();
             for (int j = 0; j < sizeOfIndividual; j++)
             {
                 if (random.NextDouble() <= 0.5)
@@ -97,23 +97,23 @@ namespace Laba4_GeneticAlgorithm
             return ((coeficientOfSurviving, childNumbers));
         }
 
-        public static List<(int, List<int>)> GetNewPopulationFromPossibilities(List<(int, List<int>)> pastPopulationAndChildrens)
+        public static List<(long, List<int>)> GetNewPopulationFromPossibilities(List<(long, List<int>)> pastPopulationAndChildrens)
         {
             newPopulation.Clear();
             for (int i = 0; i < sizeOfPopulation; i++)
             {
-                Fraction denominator = Fraction.Zero;
+                double denominator = 0;
                 for (int j = 0; j < pastPopulationAndChildrens.Count; j++)
                 {
-                    denominator += (Fraction)(double)(1 / pastPopulationAndChildrens[j].Item1);
+                    denominator += ((double)1 / (double)pastPopulationAndChildrens[j].Item1);
                 }
                 allPossibilities.Clear();
                 for (int j = 0; j < pastPopulationAndChildrens.Count; j++)
                 {
-                    allPossibilities.Add((Fraction)(double)(1 / pastPopulationAndChildrens[j].Item1) / denominator);
+                    allPossibilities.Add(((double)1 / (double)pastPopulationAndChildrens[j].Item1) / (double)denominator);
                 }
                 lineOfPossibilities.Clear();
-                Fraction mainPossibility = Fraction.Zero;
+                double mainPossibility = 0;
                 for (int j = 0; j < allPossibilities.Count; j++)
                 {
                     mainPossibility += allPossibilities[j];
@@ -122,7 +122,7 @@ namespace Laba4_GeneticAlgorithm
                 double possibility = random.NextDouble();
                 for (int j = 0; j < lineOfPossibilities.Count; j++)
                 {
-                    if ((Fraction)possibility <= lineOfPossibilities[j])
+                    if (possibility <= lineOfPossibilities[j])
                     {
                         newPopulation.Add(pastPopulationAndChildrens[j]);
                         pastPopulationAndChildrens.RemoveAt(j);

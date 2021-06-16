@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\STUDIES\\algoritms\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj": {}
+    "E:\\STUDIES\\algoritms\\Laba4_GenAlgFinal\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj": {}
   },
   "projects": {
-    "E:\\STUDIES\\algoritms\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj": {
+    "E:\\STUDIES\\algoritms\\Laba4_GenAlgFinal\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\STUDIES\\algoritms\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj",
+        "projectUniqueName": "E:\\STUDIES\\algoritms\\Laba4_GenAlgFinal\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj",
         "projectName": "Laba4_GeneticAlgotithm_F2",
-        "projectPath": "E:\\STUDIES\\algoritms\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj",
+        "projectPath": "E:\\STUDIES\\algoritms\\Laba4_GenAlgFinal\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2.csproj",
         "packagesPath": "C:\\Users\\Кирилл\\.nuget\\packages\\",
-        "outputPath": "E:\\STUDIES\\algoritms\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\obj\\",
+        "outputPath": "E:\\STUDIES\\algoritms\\Laba4_GenAlgFinal\\Laba4_GeneticAlgotithm_F2\\Laba4_GeneticAlgotithm_F2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

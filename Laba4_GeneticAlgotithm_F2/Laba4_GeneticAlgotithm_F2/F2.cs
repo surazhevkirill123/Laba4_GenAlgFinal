@@ -12,12 +12,12 @@ namespace Laba4_GeneticAlgorithm_F2
     {
         public static int minNumberInPopulation = -200;
         public static int maxNumberInPopulation = 200;
-        public static int sizeOfPopulation = 100;
+        public static int sizeOfPopulation = 1000;
         public static int sizeOfIndividual = 5;
         public static int f2Right = 22;
         public static double coeficientOfSelection = 0.5;
-        public static int countOfChildrens = 10;
-        public static double possibilityOfMutation = 0.8;
+        public static int countOfChildrens = 20;
+        public static double possibilityOfMutation = 0.1;
         public static Random random = new Random();
         public static int c = 0;
         public static int flagForChildX = 0;
@@ -29,8 +29,8 @@ namespace Laba4_GeneticAlgorithm_F2
         public static List<(long, List<int>)> parents = new List<(long, List<int>)>();
         public static List<(long, List<int>)> childrens = new List<(long, List<int>)>();
         public static List<(long, List<int>)> newPopulation = new List<(long, List<int>)>();
-        public static List<Fraction> allPossibilities = new List<Fraction>();
-        public static List<Fraction> lineOfPossibilities = new List<Fraction>();
+        public static List<double> allPossibilities = new List<double>();
+        public static List<double> lineOfPossibilities = new List<double>();
 
 
         public static List<int> GetListOfInt(int minNumber, int maxNumber, int count)
@@ -56,7 +56,7 @@ namespace Laba4_GeneticAlgorithm_F2
 
         public static long F2Left(int u, int w, int x, int y, int z)
         {
-            return (long)(Math.Pow(u, 2) * Math.Pow(w, 2) * x * Math.Pow(y, 2) + u * Math.Pow(w, 2) * Math.Pow(x, 2) * y * z + u * w * y * Math.Pow(z, 2) + Math.Pow(w, 2) * Math.Pow(x, 2) * Math.Pow(y, 2) * Math.Pow(z, 2) + w * y * z);
+            return ((long)Math.Pow(w, 2) * (long)z + (long)u * (long)Math.Pow(z, 2)+ (long)Math.Pow(y, 2) + (long)u * (long)w *(long)Math.Pow(x, 2) * (long)Math.Pow(y, 2) * (long)Math.Pow(z, 2) + (long)w * (long)y * (long)z);
         }
 
         public static void GetCurrentPopulationResults(List<(long, List<int>)> currentPopulation)
@@ -93,6 +93,10 @@ namespace Laba4_GeneticAlgorithm_F2
                     childNumbers.Add(parent2.Item2[j]);
                 }
             }
+            /*if(F2Left(childNumbers[0], childNumbers[1], childNumbers[2], childNumbers[3], childNumbers[4]) == 0)
+            {
+                Console.WriteLine("SW");
+            }*/
             coeficientOfSurviving = Math.Abs(f2Right - F2Left(childNumbers[0], childNumbers[1], childNumbers[2], childNumbers[3], childNumbers[4]));
             return ((coeficientOfSurviving, childNumbers));
         }
@@ -102,18 +106,18 @@ namespace Laba4_GeneticAlgorithm_F2
             newPopulation.Clear();
             for (int i = 0; i < sizeOfPopulation; i++)
             {
-                Fraction denominator = Fraction.Zero;
+                double denominator = 0;
                 for (int j = 0; j < pastPopulationAndChildrens.Count; j++)
                 {
-                    denominator += (Fraction)(double)(1 / pastPopulationAndChildrens[j].Item1);
+                    denominator += ((double)1 / (double)pastPopulationAndChildrens[j].Item1);
                 }
                 allPossibilities.Clear();
                 for (int j = 0; j < pastPopulationAndChildrens.Count; j++)
                 {
-                    allPossibilities.Add((Fraction)(double)(1 / pastPopulationAndChildrens[j].Item1) / denominator);
+                    allPossibilities.Add(((double)1 / (double)pastPopulationAndChildrens[j].Item1) / (double)denominator);
                 }
                 lineOfPossibilities.Clear();
-                Fraction mainPossibility = Fraction.Zero;
+                double mainPossibility = 0;
                 for (int j = 0; j < allPossibilities.Count; j++)
                 {
                     mainPossibility += allPossibilities[j];
@@ -122,7 +126,7 @@ namespace Laba4_GeneticAlgorithm_F2
                 double possibility = random.NextDouble();
                 for (int j = 0; j < lineOfPossibilities.Count; j++)
                 {
-                    if ((Fraction)possibility <= lineOfPossibilities[j])
+                    if (possibility <= lineOfPossibilities[j])
                     {
                         newPopulation.Add(pastPopulationAndChildrens[j]);
                         pastPopulationAndChildrens.RemoveAt(j);

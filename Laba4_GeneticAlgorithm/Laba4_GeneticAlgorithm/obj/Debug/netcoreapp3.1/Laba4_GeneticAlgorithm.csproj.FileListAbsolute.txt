@@ -11,3 +11,16 @@ E:\STUDIES\algoritms\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\net
 E:\STUDIES\algoritms\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.dll
 E:\STUDIES\algoritms\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.pdb
 E:\STUDIES\algoritms\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.genruntimeconfig.cache
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.exe
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.deps.json
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.runtimeconfig.json
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.runtimeconfig.dev.json
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.dll
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\bin\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.pdb
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.csprojAssemblyReference.cache
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.AssemblyInfoInputs.cache
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.AssemblyInfo.cs
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.csproj.CoreCompileInputs.cache
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.dll
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.pdb
+E:\STUDIES\algoritms\Laba4_GenAlgFinal\Laba4_GeneticAlgorithm\Laba4_GeneticAlgorithm\obj\Debug\netcoreapp3.1\Laba4_GeneticAlgorithm.genruntimeconfig.cache
